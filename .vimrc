@@ -1,1 +1,0 @@
-/Users/luismierre/.dotfiles/vimrc

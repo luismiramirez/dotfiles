@@ -2,7 +2,7 @@ filetype plugin indent on
 call pathogen#helptags()
 call pathogen#infect()
 
-set cursorline
+set cursorline cursorcolumn
 set encoding=utf-8
 set hidden
 set laststatus=2
@@ -23,16 +23,16 @@ set colorcolumn=80
 color railscasts
 
 if has ("gui_running")
-  set guifont=Inconsolata:h13
+  set guifont=Inconsolata:h15
   set guioptions-=r "Removes right hand scrollbar
   set guioptions-=L "Removes left hand scrollbar
 end
 
 "Status line
-set statusline=[%{strftime(\"%d/%m/%Y\ %H:%M\")}]\ 
-set statusline+=%<%F%h%m%r%h%w%y%=\ 
-set statusline+=Line:%l\/%L\ 
-set statusline+=Column:%c%V\ 
+set statusline=[%{strftime(\"%d/%m/%Y\ %H:%M\")}]\
+set statusline+=%<%F%h%m%r%h%w%y%=\
+set statusline+=Line:%l\/%L\
+set statusline+=Column:%c%V\
 set statusline+=%P
 
 " Identation
@@ -62,7 +62,7 @@ nnoremap <c-l> <c-w>l
 
 set list
 set listchars=""
-set listchars=tab:▸\ 
+set listchars=tab:▸\
 set listchars+=eol:¬
 set listchars+=extends:»
 set listchars+=precedes:«
@@ -72,4 +72,3 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-
